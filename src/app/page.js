@@ -54,17 +54,22 @@ export default function Home() {
             <p>Varje bransch har unika utmaningar. Här är hur vi anpassar webb och AI efter era behov.</p>
           </div>
           
-          <div className="grid-3">
+          <div className="grid-4">
             <div className="card">
               <div className="card-icon">1</div>
               <h3 className="card-title">
-                <a href="https://battrehy.se" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', hoverColor: 'var(--accent)' }}>
+                <a href="https://battrehy.se" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>
                   Hudvårdskliniker <span style={{ fontSize: '0.85em' }}>↗</span>
                 </a>
               </h3>
               <p className="card-text">
                 Full kalender börjar med att rätt kunder hittar er och kan boka på sekunder. Jag bygger sajter som fyller tiderna och AI som svarar på förfrågningar direkt — även efter stängning.
               </p>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <a href="https://battrehy.se" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Besök battrehy.se &rarr;
+                </a>
+              </div>
             </div>
             
             <div className="card">
@@ -77,6 +82,11 @@ export default function Home() {
               <p className="card-text">
                 Fler RUT-kunder utan mer tid vid datorn. En sajt som drar in förfrågningar och AI som skickar offerter och bokar in jobb åt er.
               </p>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <a href="https://stadtorget.se" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Besök stadtorget.se &rarr;
+                </a>
+              </div>
             </div>
             
             <div className="card">
@@ -85,6 +95,29 @@ export default function Home() {
               <p className="card-text">
                 Marknaden växer snabbt — den som syns först vinner affären. Jag ser till att ni hamnar överst lokalt och att inga förfrågningar blir liggande.
               </p>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  Lokal SEO & Leads
+                </span>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="card-icon">4</div>
+              <h3 className="card-title">
+                <a href="https://nakima.se/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>
+                  Kliniker & Behandlare <span style={{ fontSize: '0.85em' }}>↗</span>
+                </a>
+              </h3>
+              <p className="card-text">
+                För personer i Sverige som vill hitta och jämföra naprapat, kiropraktor, massage eller fysioterapi nära sig.<br /><br />
+                <strong>För kliniker:</strong> Behandlare och kliniker som vill nå nya patienter via en sökbar, lokal profil.
+              </p>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <a href="https://nakima.se/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Besök nakima.se &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </div>
