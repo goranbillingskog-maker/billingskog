@@ -8,6 +8,14 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/webbkurs",
+        destination: "/webbkurs.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
