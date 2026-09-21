@@ -110,7 +110,7 @@ export default function Home() {
                 </a>
               </h3>
               <p className="card-text">
-                För personer i Sverige som vill hitta och jämföra naprapat, kiropraktor, massage eller fysioterapi nära sig.<br /><br />
+                <strong>För patienter:</strong> Personer i Sverige som vill hitta och jämföra naprapat, kiropraktor, massage eller fysioterapi nära sig.<br /><br />
                 <strong>För kliniker:</strong> Behandlare och kliniker som vill nå nya patienter via en sökbar, lokal profil.
               </p>
               <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
