@@ -7,143 +7,143 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy:  #0D2B52;
-    --navy2: #1A4E8C;
-    --gold:  #B8860B;
-    --lgold: #F5EDD4;
-    --white: #FFFFFF;
-    --off:   #F8F9FB;
-    --smoke: #EEF1F6;
-    --ink:   #1C2340;
-    --muted: #6B7A99;
-    --rule:  #D8DEE9;
+    --navy:   #16324F;
+    --navy-soft: #3D5A78;
+    --gold:   #B8860B;
+    --gold-soft: #D8B25C;
+    --cream:  #FAF8F4;
+    --paper:  #FFFFFF;
+    --mist:   #F3F1EC;
+    --ink:    #1F2A37;
+    --muted:  #7A8494;
+    --rule:   #E7E3DA;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Segoe UI', Calibri, Arial, sans-serif; color: var(--ink); background: var(--off); }
+  body { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; color: var(--ink); background: var(--cream); }
+  h1, h2, .quote-section blockquote { font-family: Georgia, 'Times New Roman', serif; }
 
   /* ─ NAV ─ */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: var(--navy); padding: 14px 40px;
+    background: rgba(250,248,244,0.9); backdrop-filter: blur(8px);
+    padding: 20px 48px;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 3px solid var(--gold);
+    border-bottom: 1px solid var(--rule);
   }
-  nav .logo { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+  nav .logo { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 3px; text-transform: uppercase; }
   nav a.cta-nav {
-    background: var(--gold); color: var(--white); font-size: 13px; font-weight: 700;
-    padding: 9px 22px; text-decoration: none; letter-spacing: 0.5px;
-    transition: opacity 0.2s;
+    background: transparent; color: var(--navy); font-size: 13px; font-weight: 600;
+    padding: 10px 22px; text-decoration: none; letter-spacing: 0.5px;
+    border: 1px solid var(--navy); border-radius: 999px;
+    transition: all 0.25s;
   }
-  nav a.cta-nav:hover { opacity: 0.85; }
+  nav a.cta-nav:hover { background: var(--navy); color: var(--paper); }
 
   /* ─ HERO ─ */
   .hero {
-    background-image:
-      linear-gradient(120deg, rgba(13,43,82,0.94) 0%, rgba(13,43,82,0.88) 35%, rgba(13,43,82,0.55) 100%),
-      url('/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 40px 70px;
-    position: relative; overflow: hidden;
+    padding: 100px 48px 90px;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;
+    max-width: 1200px; margin: 0 auto;
   }
-  .hero::after {
-    content: '';
-    position: absolute; right: 60px; bottom: -60px;
-    width: 280px; height: 280px; border-radius: 50%;
-    border: 2px solid var(--gold); opacity: 0.18;
-    pointer-events: none;
-  }
-  .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
   .hero-label {
     font-size: 11px; font-weight: 700; color: var(--gold);
-    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;
+    letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;
   }
-  .hero-rule { width: 180px; height: 3px; background: var(--gold); margin-bottom: 24px; }
-  .hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 22px; }
-  .hero-sub { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 540px; margin-bottom: 32px; }
-  .hero-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero h1 { font-size: clamp(34px, 4.2vw, 52px); font-weight: 400; color: var(--navy); line-height: 1.18; margin-bottom: 22px; letter-spacing: -0.3px; }
+  .hero-sub { font-size: 17px; color: var(--muted); line-height: 1.75; max-width: 460px; margin-bottom: 32px; }
+  .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
   .badge {
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
-    color: var(--white); font-size: 13px; padding: 6px 16px;
+    background: var(--paper); border: 1px solid var(--rule);
+    color: var(--navy); font-size: 13px; padding: 7px 16px; border-radius: 999px;
   }
   .badge strong { color: var(--gold); }
   .btn-primary {
-    display: inline-block; background: var(--gold); color: var(--white);
-    font-size: 16px; font-weight: 700; padding: 16px 36px;
-    text-decoration: none; letter-spacing: 0.5px;
-    border-bottom: 4px solid #8B6508;
-    transition: opacity 0.2s;
+    display: inline-block; background: var(--navy); color: var(--paper);
+    font-size: 15px; font-weight: 600; padding: 16px 34px;
+    text-decoration: none; letter-spacing: 0.3px; border-radius: 999px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(22,50,79,0.18);
   }
-  .btn-primary:hover { opacity: 0.9; }
-  .hero-note { margin-top: 14px; font-size: 13px; color: var(--muted); font-style: italic; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(22,50,79,0.24); }
+  .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); font-style: italic; }
+
+  .hero-visual { position: relative; }
+  .hero-visual img {
+    width: 100%; display: block; border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(22,50,79,0.16);
+  }
+  .hero-visual::after {
+    content: ''; position: absolute; inset: 0; border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    pointer-events: none;
+  }
+  .hero-visual::before {
+    content: ''; position: absolute; top: 20px; left: 20px; right: -20px; bottom: -20px;
+    border: 1px solid var(--gold-soft); border-radius: 18px; z-index: -1;
+  }
 
   /* ─ SECTIONS ─ */
-  section { padding: 64px 40px; }
-  .section-inner { max-width: 860px; margin: 0 auto; }
-  .section-label { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
-  .section-rule { width: 60px; height: 3px; background: var(--gold); margin: 8px 0 28px; }
-  .section-title { font-size: clamp(24px, 3vw, 34px); font-weight: 700; color: var(--ink); margin-bottom: 8px; }
-  .section-sub { font-size: 16px; color: var(--muted); line-height: 1.65; margin-bottom: 36px; }
+  section { padding: 72px 48px; }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+  .section-title { font-size: clamp(24px, 3vw, 32px); font-weight: 400; color: var(--navy); margin-bottom: 12px; }
+  .section-sub { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 44px; max-width: 620px; }
 
   /* ─ SESSIONS ─ */
-  .sessions { background: var(--white); }
-  .session-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .sessions { background: var(--paper); }
+  .session-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
   .session-card {
-    background: var(--off); border: 1px solid var(--rule);
-    padding: 24px 20px; position: relative; overflow: hidden;
+    background: var(--cream); border: 1px solid var(--rule); border-radius: 14px;
+    padding: 28px 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .session-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  }
-  .session-card:nth-child(1)::before { background: var(--navy); }
-  .session-card:nth-child(2)::before { background: var(--gold); }
-  .session-card:nth-child(3)::before { background: var(--navy2); }
-  .session-card:nth-child(4)::before { background: var(--navy); }
+  .session-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(22,50,79,0.08); }
   .session-num {
-    width: 36px; height: 36px; border-radius: 50%;
+    width: 34px; height: 34px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 16px; font-weight: 700; color: var(--white);
-    margin-bottom: 14px;
+    font-size: 14px; font-weight: 700; color: var(--paper);
+    margin-bottom: 16px; background: var(--navy);
   }
-  .session-card:nth-child(1) .session-num { background: var(--navy); }
   .session-card:nth-child(2) .session-num { background: var(--gold); }
-  .session-card:nth-child(3) .session-num { background: var(--navy2); }
-  .session-card:nth-child(4) .session-num { background: var(--navy); }
-  .session-title { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-  .session-sub { font-size: 12px; color: var(--gold); font-weight: 600; margin-bottom: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .session-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .session-card:nth-child(3) .session-num { background: var(--navy-soft); }
+  .session-title { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .session-sub { font-size: 11px; color: var(--gold); font-weight: 700; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+  .session-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
 
   /* ─ FOR WHOM ─ */
-  .for-whom { background: var(--off); }
-  .traits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .for-whom { background: var(--mist); }
+  .traits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
   .trait {
-    display: flex; gap: 14px; align-items: flex-start;
-    background: var(--white); border: 1px solid var(--rule); padding: 20px;
+    display: flex; gap: 16px; align-items: flex-start;
+    background: var(--paper); border-radius: 14px; padding: 24px;
+    box-shadow: 0 4px 16px rgba(22,50,79,0.05);
   }
   .trait-icon {
-    min-width: 42px; height: 42px;
-    background: var(--navy); display: flex; align-items: center; justify-content: center;
-    font-size: 16px; font-weight: 700; color: var(--white); border-radius: 4px;
+    min-width: 40px; height: 40px;
+    background: var(--cream); border: 1px solid var(--gold-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: var(--gold); border-radius: 10px;
   }
-  .trait-text strong { display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
-  .trait-text span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .trait-text strong { display: block; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .trait-text span { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
   /* ─ QUOTE ─ */
-  .quote-section { background: var(--lgold); border-left: 6px solid var(--gold); padding: 40px 40px; }
-  .quote-section blockquote { max-width: 700px; margin: 0 auto; font-size: 20px; color: var(--ink); font-style: italic; line-height: 1.7; }
-  .quote-section cite { display: block; margin-top: 14px; font-size: 14px; color: var(--muted); font-style: normal; font-weight: 600; }
+  .quote-section { background: var(--paper); padding: 60px 48px; text-align: center; }
+  .quote-section blockquote {
+    max-width: 680px; margin: 0 auto; font-size: 22px; color: var(--navy);
+    font-style: italic; line-height: 1.65; position: relative;
+  }
+  .quote-rule { width: 40px; height: 2px; background: var(--gold); margin: 0 auto 24px; }
+  .quote-section cite { display: block; margin-top: 18px; font-size: 13px; color: var(--muted); font-style: normal; font-weight: 600; letter-spacing: 0.5px; }
 
   /* ─ FORM SECTION ─ */
-  .form-section { background: var(--navy); padding: 64px 40px; }
-  .form-inner { max-width: 720px; margin: 0 auto; }
-  .form-section .section-label { color: var(--gold); }
-  .form-section .section-title { color: var(--white); }
-  .form-section .section-sub { color: var(--muted); }
+  .form-section { background: var(--mist); padding: 72px 48px; }
+  .form-inner { max-width: 760px; margin: 0 auto; text-align: center; }
   .form-frame-wrap {
-    background: var(--white);
-    border-top: 5px solid var(--gold);
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    background: var(--paper); border-radius: 18px;
+    overflow: hidden; margin-top: 40px; text-align: left;
+    box-shadow: 0 20px 50px rgba(22,50,79,0.1);
+    border: 1px solid var(--rule);
   }
   .form-frame-wrap iframe {
     display: block; width: 100%; border: none;
@@ -152,20 +152,23 @@
 
   /* ─ FOOTER ─ */
   footer {
-    background: var(--navy); border-top: 1px solid rgba(255,255,255,0.07);
-    padding: 28px 40px;
+    background: var(--cream); border-top: 1px solid var(--rule);
+    padding: 32px 48px;
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
   }
-  footer .footer-logo { font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+  footer .footer-logo { font-size: 12px; font-weight: 700; color: var(--navy); letter-spacing: 2px; text-transform: uppercase; }
   footer .footer-info { font-size: 12px; color: var(--muted); }
   footer .footer-info a { color: var(--gold); text-decoration: none; }
 
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding: 64px 24px; gap: 40px; }
+    .hero-visual { order: -1; }
+  }
   @media (max-width: 600px) {
-    nav { padding: 12px 20px; }
-    .hero { padding: 50px 20px; }
-    section { padding: 48px 20px; }
-    .form-section { padding: 48px 20px; }
-    .quote-section { padding: 32px 20px; }
+    nav { padding: 16px 20px; }
+    section { padding: 56px 20px; }
+    .form-section { padding: 56px 20px; }
+    .quote-section { padding: 48px 20px; }
     footer { padding: 24px 20px; flex-direction: column; text-align: center; }
   }
 </style>
@@ -175,14 +178,13 @@
 <!-- NAV -->
 <nav>
   <span class="logo">Lidingökonstnärerna</span>
-  <a href="#formular" class="cta-nav">Anmäl intresse &rarr;</a>
+  <a href="#formular" class="cta-nav">Anmäl intresse</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-inner">
-    <p class="hero-label">Webbkurs 2025</p>
-    <div class="hero-rule"></div>
+  <div class="hero-copy">
+    <p class="hero-label">Webbkurs 2026</p>
     <h1>Din konst förtjänar<br>en egen hemsida</h1>
     <p class="hero-sub">En kurs för dig som vill förstå internet och lära dig att skapa en snygg portföljsida — helt utan förkunskaper.</p>
     <div class="hero-badges">
@@ -191,8 +193,11 @@
       <span class="badge"><strong>Max 6</strong> deltagare</span>
       <span class="badge"><strong>0</strong> förkunskaper krävs</span>
     </div>
-    <a href="#formular" class="btn-primary">Anmäl ditt intresse &rarr;</a>
+    <a href="#formular" class="btn-primary">Anmäl ditt intresse →</a>
     <p class="hero-note">Det tar bara 3–5 minuter — och hjälper oss anpassa kursen för dig</p>
+  </div>
+  <div class="hero-visual">
+    <img src="/hero-bg.jpg" alt="Konstverk">
   </div>
 </div>
 
@@ -200,7 +205,6 @@
 <section class="sessions">
   <div class="section-inner">
     <p class="section-label">Kursinnehåll</p>
-    <div class="section-rule"></div>
     <h2 class="section-title">Fyra tillfällen — ett mål</h2>
     <p class="section-sub">Varje tillfälle är 2 timmar med kaffe, fika och praktiska övningar. Vi tar det i din takt.</p>
 
@@ -237,8 +241,8 @@
 <section class="for-whom">
   <div class="section-inner">
     <p class="section-label">För vem?</p>
-    <div class="section-rule"></div>
     <h2 class="section-title">Kursen är gjord för dig som...</h2>
+    <p class="section-sub">&nbsp;</p>
 
     <div class="traits">
       <div class="trait">
@@ -275,6 +279,7 @@
 
 <!-- QUOTE -->
 <div class="quote-section">
+  <div class="quote-rule"></div>
   <blockquote>
     "Målet är att du efter kursen ska känna dig trygg med internet — och ha en riktig hemsida där du kan visa upp din konst för hela världen."
     <cite>— Göran Billingskog, kursledare</cite>
@@ -285,9 +290,8 @@
 <section class="form-section" id="formular">
   <div class="form-inner">
     <p class="section-label">Anmälan</p>
-    <div class="section-rule"></div>
     <h2 class="section-title">Anmäl ditt intresse</h2>
-    <p class="section-sub">Fyll i formuläret nedan (3–5 min) så hjälper du oss att anpassa kursen efter dina önskemål och kunskapsnivå. Vi hör av oss med detaljer om datum och plats.</p>
+    <p class="section-sub" style="margin-left:auto;margin-right:auto;">Fyll i formuläret nedan (3–5 min) så hjälper du oss att anpassa kursen efter dina önskemål och kunskapsnivå. Vi hör av oss med detaljer om datum och plats.</p>
 
     <div class="form-frame-wrap">
       <iframe
