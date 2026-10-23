@@ -91,14 +91,19 @@ export default function Home() {
             
             <div className="card">
               <div className="card-icon">3</div>
-              <h3 className="card-title">Laddstolpar & Solceller</h3>
+              <h3 className="card-title">
+                <a href="https://petkollen.se" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>
+                  Djurvård & Djurpassning <span style={{ fontSize: '0.85em' }}>↗</span>
+                </a>
+              </h3>
               <p className="card-text">
-                Marknaden växer snabbt — den som syns först vinner affären. Jag ser till att ni hamnar överst lokalt och att inga förfrågningar blir liggande.
+                <strong>För djurägare:</strong> Personer i Sverige som vill hitta och jämföra godkända hunddagis, kattpensionat eller veterinärer nära sig.<br /><br />
+                <strong>För verksamheter:</strong> Djurverksamheter som vill nå nya kunder och djurägare via en sökbar, granskad profil.
               </p>
               <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                  Lokal SEO & Leads
-                </span>
+                <a href="https://petkollen.se" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Besök petkollen.se &rarr;
+                </a>
               </div>
             </div>
 
@@ -380,7 +385,7 @@ export default function Home() {
               <select id="industry" name="industry" className="form-select">
                 <option value="hudvard">Hudvårdsklinik</option>
                 <option value="stad">Städföretag</option>
-                <option value="solceller">Laddstolpar & Solceller</option>
+                <option value="djurvard">Djurvård & Djurpassning</option>
                 <option value="annat">Annat lokalt företag</option>
               </select>
             </div>
