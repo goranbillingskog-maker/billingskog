@@ -54,7 +54,7 @@ export default function Home() {
             <p>Varje bransch har unika utmaningar. Här är hur vi anpassar webb och AI efter era behov.</p>
           </div>
           
-          <div className="grid-4">
+          <div className="grid-5">
             <div className="card">
               <div className="card-icon">1</div>
               <h3 className="card-title">
@@ -121,6 +121,24 @@ export default function Home() {
               <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
                 <a href="https://nakima.se/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                   Besök nakima.se &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="card-icon">5</div>
+              <h3 className="card-title">
+                <a href="https://eljourakuten.se" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>
+                  Elektriker & Eljour <span style={{ fontSize: '0.85em' }}>↗</span>
+                </a>
+              </h3>
+              <p className="card-text">
+                <strong>För privatpersoner & företag:</strong> Kunder som snabbt behöver hjälp av en behörig elektriker vid akuta elfel, strömavbrott eller elinstallationer nära sig.<br /><br />
+                <strong>För elfirmor:</strong> Lokala elfirmor som vill nå nya kunder och ta emot kvalificerade förfrågningar direkt i sitt närområde.
+              </p>
+              <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
+                <a href="https://eljourakuten.se" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Besök eljourakuten.se &rarr;
                 </a>
               </div>
             </div>
@@ -386,6 +404,8 @@ export default function Home() {
                 <option value="hudvard">Hudvårdsklinik</option>
                 <option value="stad">Städföretag</option>
                 <option value="djurvard">Djurvård & Djurpassning</option>
+                <option value="behandlare">Kliniker & Behandlare</option>
+                <option value="eljour">Elektriker & Eljour</option>
                 <option value="annat">Annat lokalt företag</option>
               </select>
             </div>

@@ -258,6 +258,12 @@ a {
   gap: 24px;
 }
 
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -269,7 +275,8 @@ a {
   flex-direction: column;
 }
 
-.grid-4 .card {
+.grid-4 .card,
+.grid-5 .card {
   padding: 32px 24px;
 }
 
@@ -586,7 +593,8 @@ a {
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .grid-4 {
+  .grid-4,
+  .grid-5 {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
@@ -610,7 +618,7 @@ a {
   .section-title {
     font-size: 2rem;
   }
-  .grid-3, .grid-4, .process-steps, .proofs-grid, .footer-grid {
+  .grid-3, .grid-4, .grid-5, .process-steps, .proofs-grid, .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
